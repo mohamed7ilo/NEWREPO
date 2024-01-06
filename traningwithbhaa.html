@@ -7,7 +7,25 @@
 </head>
 <body>
     <script>
-        
+        function updateEngine(car){
+        console.log(car);//
+        car.engine = car.engine+0.2;
+        console.log(typeof car);
+        return car
+      }
+      
+      let bhaaCar = { 
+        name:"merceds",color:"white", engine:1.4 , passengers : [{name:"bhaa"},{name:"omar"},{name:"hmody"}]
+      }
+      let hmodyCar = {
+        name:"bmw",color:"black", engine:1.4 , passengers:[]
+    }
+    function changePassenger(car1,car2){
+        car1.passengers=car2.passengers
+        car2.passengers=car1.passengers
+        return car1 , car2 
+
+    }
     </script>
 </body>
 </html>
