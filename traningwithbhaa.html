@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        function updateEngine(car){
-        console.log(car);//
-        car.engine = car.engine+0.2;
-        console.log(typeof car);
-        return car
-      }
-      
-      let bhaaCar = { 
-        name:"merceds",color:"white", engine:1.4 , passengers : [{name:"bhaa"},{name:"omar"},{name:"hmody"}]
-      }
-      let hmodyCar = {
-        name:"bmw",color:"black", engine:1.4 , passengers:[]
-    }
-    function changePassenger(car1,car2){
-        car1.passengers=car2.passengers
-        car2.passengers=car1.passengers
-        return car1 , car2 
+        function updateEngine(car) {
+            console.log(car);//
+            car.engine = car.engine + 0.2;
+            console.log(typeof car);
+            return car
+        }
 
-    }
+        let bhaaCar = {
+            name: "merceds", color: "white", engine: 1.4, passengers: [{ name: "bhaa" }, { name: "omar" }, { name: "hmody" }]
+        }
+        let hmodyCar = {
+            name: "bmw", color: "black", engine: 1.4, passengers: [{ name: "mahmod" }]
+        }
+        function changePassenger(car1, car2) {
+            for(let x=0;x<car1.passengers.length; x++){
+                console.log(car1.passengers[x]); 
+                car2.passengers.push(car1.passengers[x])
+            }
+            car1.passengers=[]
+        console.log(car1)
+        console.log(car2);
+        }
+        changePassenger(bhaaCar,hmodyCar)
     </script>
 </body>
+
 </html>
