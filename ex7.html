@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //ex2
+        function filterNumbers3(arr) {
+            return arr.filter(num => num % 3 != 0);
+        }
+
+        // Prompt for user input
+        let inputString = prompt("Enter a list of numbers separated by commas (e.g., 4, 5, 6, 7, 8, 9):");
+
+        // Convert the input string to an array of numbers
+        let inputArray = inputString.split(',').map(Number);
+
+        // Call the function with the user-input array
+        let filteredArray = filterNumbers3(inputArray);
+
+        // Display the result
+        document.write("Original array:", inputArray);
+        document.write('<br>')
+        document.write("Filtered array (The numbers that divide by 3 ):", filteredArray);
+
+
+    </script>
+</body>
+
+</html>

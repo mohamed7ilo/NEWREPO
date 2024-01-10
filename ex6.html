@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function filterStringsByLength(words, desiredLength) {
+  const filteredStrings = words.filter(word => word.length === desiredLength);
+  return filteredStrings;
+}
+const inputArray = ["apple", "cat", "dog", "banana", "car"];
+const desiredLength = parseInt(prompt('desire your string legnth'));
+const resultArray = filterStringsByLength(inputArray, desiredLength);
+console.log(resultArray); 
+
+    </script>
+</body>
+</html>

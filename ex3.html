@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //ex2
+        function filterNumbersEzogi(arr) {
+            return arr.filter(num => num % 2 !== 0);
+        }
+
+        // Prompt for user input
+        let inputString = prompt("Enter a list of numbers separated by commas (e.g., 6, 200, 300, 800, 1, 99):");
+
+        // Convert the input string to an array of numbers
+        let inputArray = inputString.split(',').map(Number);
+
+        // Call the function with the user-input array
+        let filteredArray = filterNumbersEzogi(inputArray);
+
+        // Display the result
+        document.write("Original array:", inputArray);
+        document.write('<br>')
+        document.write("Filtered array (The e-zogi numbers):", filteredArray);
+
+
+
+    </script>
+</body>
+
+</html>
